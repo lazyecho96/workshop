@@ -1,6 +1,8 @@
-# Setting Up Nginx on Your EC2 Instance
+# Setting Up Nginx and Docker on Your EC2 Instance
 
-Follow these steps to set up Nginx on your EC2 instance.
+Follow these steps to set up Nginx and Docker on your EC2 instance.
+
+## Setting Up Nginx
 
 1. **Connect to Your EC2 Instance**: Use SSH to connect to your EC2 instance.
 
@@ -8,7 +10,6 @@ Follow these steps to set up Nginx on your EC2 instance.
 
     ```bash
     sudo apt-get update
-    sudo apt-get upgrade
     ```
 
 3. **Install Nginx**: Use the following command to install Nginx:
@@ -38,7 +39,7 @@ Follow these steps to set up Nginx on your EC2 instance.
 7. **Edit the Default Server Block Configuration**: Open the default server block configuration file using a text editor:
 
     ```bash
-    sudo vim default
+    sudo nano default
     ```
 
 8. **Configure Nginx to Serve Your index.html File**: Inside the server block, ensure you have a section like this:
@@ -76,3 +77,33 @@ Follow these steps to set up Nginx on your EC2 instance.
     ```
 
 12. **Access Your Website**: You should now be able to access your website by entering your EC2 instance's public IP address or domain name into a web browser.
+
+## Installing Docker and Creating Container
+
+1. **Install Docker**: Run the following commands to install Docker:
+
+    ```bash
+    sudo apt-get update
+    sudo apt-get install docker
+    ```
+
+2. **Build Your Docker Image**: Build your Docker image by running the following command in your project directory:
+
+    ```bash
+    docker build . -t myapp
+    ```
+
+3. **Check Docker Images**: View your Docker images using the following command:
+
+    ```bash
+    docker images
+    ```
+
+4. **Run Your Docker Container**: Run your Docker container using the following command, specifying the port mappings if necessary:
+
+    ```bash
+    docker run -p 5000:5000 myapp
+    ```
+
+   Replace `myapp` with the name of your Docker image.
+
