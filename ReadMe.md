@@ -107,3 +107,7 @@ Follow these steps to set up Nginx and Docker on your EC2 instance.
 
    Replace `myapp` with the name of your Docker image.
 
+
+   
+## Setting Up Minikube 
+    follow this link : https://minikube.sigs.k8s.io/docs/start/
