@@ -131,8 +131,10 @@ Before you begin, ensure you have the following installed:
    kubectl apply -f deployment.yaml
 
 2.  **verify deployment**:
+       ```bash
         kubectl get deployments
 3. **Expose the Deployment:
+     ```bash
        kubectl expose deployment hello-world-deployment --type=NodePort --port=80
 
 
