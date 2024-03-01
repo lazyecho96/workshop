@@ -135,6 +135,6 @@ Before you begin, ensure you have the following installed:
         kubectl get deployments
 3. **Expose the Deployment:
      ```bash
-       kubectl expose deployment hello-world-deployment --type=NodePort --port=80
+       kubectl port-forward pod-name 8080:80
 
 
