@@ -111,3 +111,31 @@ Follow these steps to set up Nginx and Docker on your EC2 instance.
    
 ## Setting Up Minikube 
     follow this link : https://minikube.sigs.k8s.io/docs/start/
+
+
+# Hello World Kubernetes Deployment
+
+This repository contains a sample Kubernetes deployment file to deploy a simple "hello world" application.
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+- [minikube](https://minikube.sigs.k8s.io/docs/start/)
+
+## Deployment Steps
+
+1. **Deploy the Pod**:
+   
+   Save the [deployment.yaml](deployment.yaml) file to your local machine. Then, deploy the pod using the following command:
+   
+   ```bash
+   kubectl apply -f deployment.yaml
+
+2.  **verify deployment**:
+        kubectl get deployments
+3. **Expose the Deployment:
+       kubectl expose deployment hello-world-deployment --type=NodePort --port=80
+
+
