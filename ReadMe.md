@@ -39,7 +39,7 @@ Follow these steps to set up Nginx and Docker on your EC2 instance.
 7. **Edit the Default Server Block Configuration**: Open the default server block configuration file using a text editor:
 
     ```bash
-    sudo nano default
+    sudo vim default
     ```
 
 8. **Configure Nginx to Serve Your index.html File**: Inside the server block, ensure you have a section like this:
