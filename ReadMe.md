@@ -7,14 +7,14 @@ Follow these steps to set up Nginx on your EC2 instance.
 2. **Update Your System**: Run the following commands to update your package repository and installed packages:
 
     ```bash
-    sudo apt update
-    sudo apt upgrade
+    sudo apt-get update
+    sudo apt-get upgrade
     ```
 
 3. **Install Nginx**: Use the following command to install Nginx:
 
     ```bash
-    sudo apt install nginx
+    sudo apt-get install nginx
     ```
 
 4. **Start Nginx**: Once Nginx is installed, it should start automatically. If it doesn't, you can start it using:
